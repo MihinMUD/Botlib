@@ -4,7 +4,7 @@ class Bot:
         self.desp =  desp
         self.customMesg = customMesg
         
-    def onMessage(slef , ctx:str):
+    def onMessage(self, ctx:str):
             pass
 
     def runBot(self):
