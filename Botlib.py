@@ -10,5 +10,20 @@ class Bot:
     def runBot(self):
         while True:
             req = str(input("User: "))
-            if  req != "":
+            if req == "exit":
+                break
+            elif  req.lower() != "":
                 self.onMessage(req)
+    
+    def command(self, func:callable):
+        cmdName = func.__name__
+        def onMessage(ctx):
+            if ctx.lower() == cmdName.lower():
+                func(ctx)
+        self.onMessage = onMessage
+    
+    def send(self, ctx):
+        print(f"{self.name}: {ctx}")
+
+#i hate it!!! WHY IS THIS NOT WORKING AS I WANTED AAAAAAAAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
+# WILL BE BACK AFTER BREAK FIRST KKKKKKK
