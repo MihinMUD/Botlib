@@ -24,6 +24,3 @@ class Bot:
     
     def send(self, ctx):
         print(f"{self.name}: {ctx}")
-
-#i hate it!!! WHY IS THIS NOT WORKING AS I WANTED AAAAAAAAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
-# WILL BE BACK AFTER BREAK FIRST KKKKKKK
