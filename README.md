@@ -2,7 +2,7 @@
 A bot lib for python
 
 
-#How to use it
+# How to use it
 Download the bot.py file and move it to your project dir
 
 ```py
