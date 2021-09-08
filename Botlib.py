@@ -24,3 +24,5 @@ class Bot:
     
     def send(self, ctx):
         print(f"{self.name}: {ctx}")
+
+        
