@@ -8,22 +8,21 @@ Download the bot.py file and move it to your project dir
 ```py
 from Botlib import Bot
 from random import randint
-bot = Bot("Mud" , "Cool Bot")
 
-def onMessage(ctx:str):
-    if ctx == "hi":
-        print("hello")
-    
-    elif ctx.startswith("roll"):
-        args = ctx.split(" ")
-        ans = randint(0,int(args[1]))
-        print(f"you rolled {ans}")
-    else:
-        print("Invalid command")
+mybot = Bot("Bot", "nice bot")
 
+@mybot.onMessage
+def hi(ctx):
+    mybot.send("hi")
 
-bot.onMessage = onMessage
-bot.runBot()
+@mybot.onMessage
+def randnum(ctx):
+    try:
+        mybot.send(randint(1, int(ctx[0])))
+    except:
+        mybot.send("Empty or wrong Input!")
+
+mybot.runBot()
 ```
 
 a example code on how to use it
